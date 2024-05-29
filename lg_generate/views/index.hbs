@@ -38,7 +38,9 @@
             $.ajax({
                 type: "POST",
                 url: "/users/registration",
-                data: JSON.stringify(regFormData),
+                data: {
+                    "regFormData":regFormData
+                },
                 success: function (data) {
                     alert(data);
                 },
